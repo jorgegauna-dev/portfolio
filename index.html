@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jorge | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1>Jorge Gauna</h1>
+    <p>Front-End Developer • Landing Pages • Responsive Websites</p>
+    <div class="buttons">
+      <a class="btn" href="#proyectos">Ver proyectos</a>
+      <a class="btn btn-outline" href="#contacto">Contactarme</a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="section" id="proyectos">
+      <h2>Proyectos</h2>
+
+      <div class="grid">
+
+        <article class="card">
+          <h3>Barbería (Website)</h3>
+          <p>Web responsive para una barbería. Secciones: inicio, servicios, galería y contacto.</p>
+          <div class="card-actions">
+            <a class="link" href="#" target="_blank">Ver demo</a>
+            <a class="link" href="#" target="_blank">Ver código</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Landing Page</h3>
+          <p>Landing moderna enfocada en conversión, con CTA, beneficios y formulario.</p>
+          <div class="card-actions">
+            <a class="link" href="#" target="_blank">Ver demo</a>
+            <a class="link" href="#" target="_blank">Ver código</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Proyecto #3</h3>
+          <p>Acá vamos a poner el tercer ejemplo (cuando lo tengamos).</p>
+          <div class="card-actions">
+            <a class="link" href="#" target="_blank">Ver demo</a>
+            <a class="link" href="#" target="_blank">Ver código</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section" id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy desarrollador front-end. Me enfoco en crear sitios modernos, rápidos y responsive.
+        Trabajo con HTML, CSS y JavaScript.
+      </p>
+    </section>
+
+    <section class="section" id="contacto">
+      <h2>Contacto</h2>
+      <p>📩 Email: <a class="link" href="mailto:TUEMAIL@correo.com">jorgegauna.dev@gmail.com</a></p>
+      <p>🌐 GitHub: <a class="link" href="https://github.com/TUUSUARIO" target="_blank">github.com/jorgegauna-dev</a></p>
+      <p>💬 WhatsApp: <a class="link" href="https://wa.me/54TUNUMERO" target="_blank">Escribime</a></p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Jorge Gauna</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
