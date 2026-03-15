@@ -1,2 +1,2 @@
 # portfolio
-Personal portfolio website built with HTML and CSS
+Personal portfolio website built with HTML and Tailwind CSS
