@@ -1,85 +1,278 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jorge | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jorge Gauna | Front-End Developer</title>
+
+<meta name="description" content="Front-End Developer building modern responsive websites and landing pages">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body>
 
-  <header class="header">
-    <h1>Jorge Gauna</h1>
-    <p>Front-End Developer • Landing Pages • Responsive Websites</p>
-    <div class="buttons">
-      <a class="btn" href="#proyectos">Ver proyectos</a>
-      <a class="btn btn-outline" href="#contacto">Contactarme</a>
-    </div>
-  </header>
 
-  <main class="container">
+<body class="bg-slate-950 text-white">
 
-    <section class="section" id="proyectos">
-      <h2>Proyectos</h2>
 
-      <div class="grid">
+<!-- NAVBAR -->
 
-        <article class="card">
-          <h3>Barbería (Website)</h3>
-          <p>Web responsive para una barbería. Secciones: inicio, servicios, galería y contacto.</p>
-          <div class="card-actions">
-            <a class="link" href="#" target="_blank">Ver demo</a>
-            <a class="link" href="#" target="_blank">Ver código</a>
-          </div>
-        </article>
+<header class="border-b border-white/10">
 
-        <article class="card">
-          <h3>Landing Page</h3>
-          <p>Landing moderna enfocada en conversión, con CTA, beneficios y formulario.</p>
-          <div class="card-actions">
-            <a class="link" href="#" target="_blank">Ver demo</a>
-            <a class="link" href="#" target="_blank">Ver código</a>
-          </div>
-        </article>
+<div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-5">
 
-        <article class="card">
-          <h3>Business Landing Page</h3>
-<p>
-Landing page moderna para negocios, diseñada para atraer clientes y mostrar servicios.
+<h1 class="text-xl font-bold">Jorge Gauna</h1>
+
+<nav class="space-x-6 text-sm text-gray-300 hidden md:block">
+<a href="#projects" class="hover:text-white">Projects</a>
+<a href="#about" class="hover:text-white">About</a>
+<a href="#skills" class="hover:text-white">Skills</a>
+<a href="#contact" class="hover:text-white">Contact</a>
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+
+<div>
+
+<p class="text-blue-400 font-semibold mb-3">Front-End Developer</p>
+
+<h2 class="text-4xl md:text-5xl font-bold leading-tight">
+I build modern websites and landing pages
+</h2>
+
+<p class="text-gray-300 mt-6 text-lg">
+I create responsive websites using HTML, CSS, JavaScript, Tailwind CSS and WordPress.
+Focused on clean design and great user experience.
 </p>
 
-<a href="https://jorgegauna-dev.github.io/landing-page" target="_blank">Ver demo</a>
-<a href="https://github.com/jorgegauna-dev/landing-page" target="_blank">Ver código</a>
-          </div>
-        </article>
+<div class="mt-8 flex gap-4">
 
-      </div>
-    </section>
+<a href="#projects"
+class="bg-blue-500 hover:bg-blue-400 px-6 py-3 rounded-lg font-semibold">
+View Projects
+</a>
 
-    <section class="section" id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>
-        Soy desarrollador front-end. Me enfoco en crear sitios modernos, rápidos y responsive.
-        Trabajo con HTML, CSS y JavaScript.
-      </p>
-    </section>
+<a href="#contact"
+class="border border-white/20 px-6 py-3 rounded-lg hover:bg-white/10">
+Contact Me
+</a>
 
-    <section class="section" id="contacto">
-      <h2>Contacto</h2>
-      <p>📩 Email: <a class="link" href="mailto:TUEMAIL@correo.com">jorgegauna.dev@gmail.com</a></p>
-      <p>🌐 GitHub: <a class="link" href="https://github.com/TUUSUARIO" target="_blank">github.com/jorgegauna-dev</a></p>
-      <p>💬 WhatsApp: <a class="link" href="https://wa.me/54TUNUMERO" target="_blank">Escribime</a></p>
-    </section>
+</div>
 
-  </main>
+</div>
 
-  <footer class="footer">
-    <p>© <span id="year"></span> Jorge Gauna</p>
-  </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<div class="bg-slate-900 border border-white/10 rounded-xl p-8">
+
+<h3 class="text-2xl font-bold mb-6">Technologies</h3>
+
+<ul class="space-y-3 text-gray-300">
+
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Tailwind CSS</li>
+<li>Responsive Design</li>
+<li>WordPress</li>
+<li>Elementor</li>
+<li>GitHub</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+
+<!-- PROJECTS -->
+
+<section id="projects" class="max-w-6xl mx-auto px-6 py-20">
+
+<h2 class="text-3xl font-bold mb-12">Projects</h2>
+
+<div class="grid md:grid-cols-3 gap-6">
+
+
+<!-- PROJECT -->
+
+<div class="bg-slate-900 border border-white/10 rounded-xl p-6">
+
+<h3 class="text-xl font-bold">Business Landing Page</h3>
+
+<p class="text-gray-400 mt-3">
+Modern landing page for businesses focused on clean layout and responsive design.
+</p>
+
+<div class="mt-6 flex gap-4">
+
+<a href="https://jorgegauna-dev.github.io/landing-page"
+target="_blank"
+class="text-blue-400 hover:text-blue-300 font-semibold">
+Live Demo
+</a>
+
+<a href="https://github.com/jorgegauna-dev/landing-page"
+target="_blank"
+class="hover:text-blue-300 font-semibold">
+Code
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- PROJECT -->
+
+<div class="bg-slate-900 border border-white/10 rounded-xl p-6">
+
+<h3 class="text-xl font-bold">Smile Center Website</h3>
+
+<p class="text-gray-400 mt-3">
+Modern dental clinic website with responsive layout and clean UI.
+</p>
+
+<div class="mt-6 flex gap-4">
+
+<a href="#" class="text-blue-400 hover:text-blue-300 font-semibold">
+Live Demo
+</a>
+
+<a href="#" class="hover:text-blue-300 font-semibold">
+Code
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- PROJECT -->
+
+<div class="bg-slate-900 border border-white/10 rounded-xl p-6">
+
+<h3 class="text-xl font-bold">Personal Portfolio</h3>
+
+<p class="text-gray-400 mt-3">
+Personal developer portfolio showcasing projects and skills.
+</p>
+
+<div class="mt-6 flex gap-4">
+
+<a href="#" class="text-blue-400 hover:text-blue-300 font-semibold">
+Live Demo
+</a>
+
+<a href="#" class="hover:text-blue-300 font-semibold">
+Code
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about" class="max-w-6xl mx-auto px-6 py-20">
+
+<h2 class="text-3xl font-bold mb-6">About Me</h2>
+
+<p class="text-gray-300 max-w-2xl leading-relaxed">
+
+I'm a Front-End Developer focused on building modern, responsive and user-friendly websites.
+
+I enjoy creating clean interfaces and helping businesses build a professional online presence.
+
+</p>
+
+</section>
+
+
+
+<!-- SKILLS -->
+
+<section id="skills" class="max-w-6xl mx-auto px-6 py-20">
+
+<h2 class="text-3xl font-bold mb-8">Skills</h2>
+
+<div class="flex flex-wrap gap-4">
+
+<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">HTML</span>
+<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">CSS</span>
+<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">JavaScript</span>
+<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">Tailwind CSS</span>
+<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">Responsive Design</span>
+<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">WordPress</span>
+<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">Elementor</span>
+<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">GitHub</span>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="max-w-6xl mx-auto px-6 py-20">
+
+<h2 class="text-3xl font-bold mb-6">Contact</h2>
+
+<p class="text-gray-300 mb-6">
+If you need a modern website or landing page feel free to contact me.
+</p>
+
+<div class="space-y-3 text-lg">
+
+<a href="mailto:jorgegauna.dev@gmail.com" class="block hover:text-blue-400">
+jorgegauna.dev@gmail.com
+</a>
+
+<a href="https://github.com/jorgegauna-dev"
+target="_blank"
+class="block hover:text-blue-400">
+github.com/jorgegauna-dev
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-white/10 text-center py-8 text-gray-400">
+
+<p>© <span id="year"></span> Jorge Gauna</p>
+
+</footer>
+
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 
 </body>
 </html>
