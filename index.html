@@ -1,278 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jorge G. | Web Developer Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio of Jorge G., Web Developer focused on responsive websites, landing pages, React projects, and modern front-end experiences."
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    body {
+      background: #020617;
+    }
 
-<title>Jorge Gauna | Front-End Developer</title>
-
-<meta name="description" content="Front-End Developer building modern responsive websites and landing pages">
-
-<script src="https://cdn.tailwindcss.com"></script>
-
+    .grid-bg {
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+  </style>
 </head>
-
-
-<body class="bg-slate-950 text-white">
-
-
-<!-- NAVBAR -->
-
-<header class="border-b border-white/10">
-
-<div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-5">
-
-<h1 class="text-xl font-bold">Jorge Gauna</h1>
-
-<nav class="space-x-6 text-sm text-gray-300 hidden md:block">
-<a href="#projects" class="hover:text-white">Projects</a>
-<a href="#about" class="hover:text-white">About</a>
-<a href="#skills" class="hover:text-white">Skills</a>
-<a href="#contact" class="hover:text-white">Contact</a>
-</nav>
-
-</div>
-
-</header>
-
-
-
-<!-- HERO -->
-
-<section class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
-
-<div>
-
-<p class="text-blue-400 font-semibold mb-3">Front-End Developer</p>
-
-<h2 class="text-4xl md:text-5xl font-bold leading-tight">
-I build modern websites and landing pages
-</h2>
-
-<p class="text-gray-300 mt-6 text-lg">
-I create responsive websites using HTML, CSS, JavaScript, Tailwind CSS and WordPress.
-Focused on clean design and great user experience.
-</p>
-
-<div class="mt-8 flex gap-4">
-
-<a href="#projects"
-class="bg-blue-500 hover:bg-blue-400 px-6 py-3 rounded-lg font-semibold">
-View Projects
-</a>
-
-<a href="#contact"
-class="border border-white/20 px-6 py-3 rounded-lg hover:bg-white/10">
-Contact Me
-</a>
-
-</div>
-
-</div>
-
-
-<div class="bg-slate-900 border border-white/10 rounded-xl p-8">
-
-<h3 class="text-2xl font-bold mb-6">Technologies</h3>
-
-<ul class="space-y-3 text-gray-300">
-
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-<li>Tailwind CSS</li>
-<li>Responsive Design</li>
-<li>WordPress</li>
-<li>Elementor</li>
-<li>GitHub</li>
-
-</ul>
-
-</div>
-
-</section>
-
-
-
-<!-- PROJECTS -->
-
-<section id="projects" class="max-w-6xl mx-auto px-6 py-20">
-
-<h2 class="text-3xl font-bold mb-12">Projects</h2>
-
-<div class="grid md:grid-cols-3 gap-6">
-
-
-<!-- PROJECT -->
-
-<div class="bg-slate-900 border border-white/10 rounded-xl p-6">
-
-<h3 class="text-xl font-bold">Business Landing Page</h3>
-
-<p class="text-gray-400 mt-3">
-Modern landing page for businesses focused on clean layout and responsive design.
-</p>
-
-<div class="mt-6 flex gap-4">
-
-<a href="https://jorgegauna-dev.github.io/landing-page"
-target="_blank"
-class="text-blue-400 hover:text-blue-300 font-semibold">
-Live Demo
-</a>
-
-<a href="https://github.com/jorgegauna-dev/landing-page"
-target="_blank"
-class="hover:text-blue-300 font-semibold">
-Code
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- PROJECT -->
-
-<div class="bg-slate-900 border border-white/10 rounded-xl p-6">
-
-<h3 class="text-xl font-bold">Smile Center Website</h3>
-
-<p class="text-gray-400 mt-3">
-Modern dental clinic website with responsive layout and clean UI.
-</p>
-
-<div class="mt-6 flex gap-4">
-
-<a href="#" class="text-blue-400 hover:text-blue-300 font-semibold">
-Live Demo
-</a>
-
-<a href="#" class="hover:text-blue-300 font-semibold">
-Code
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- PROJECT -->
-
-<div class="bg-slate-900 border border-white/10 rounded-xl p-6">
-
-<h3 class="text-xl font-bold">Personal Portfolio</h3>
-
-<p class="text-gray-400 mt-3">
-Personal developer portfolio showcasing projects and skills.
-</p>
-
-<div class="mt-6 flex gap-4">
-
-<a href="#" class="text-blue-400 hover:text-blue-300 font-semibold">
-Live Demo
-</a>
-
-<a href="#" class="hover:text-blue-300 font-semibold">
-Code
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- ABOUT -->
-
-<section id="about" class="max-w-6xl mx-auto px-6 py-20">
-
-<h2 class="text-3xl font-bold mb-6">About Me</h2>
-
-<p class="text-gray-300 max-w-2xl leading-relaxed">
-
-I'm a Front-End Developer focused on building modern, responsive and user-friendly websites.
-
-I enjoy creating clean interfaces and helping businesses build a professional online presence.
-
-</p>
-
-</section>
-
-
-
-<!-- SKILLS -->
-
-<section id="skills" class="max-w-6xl mx-auto px-6 py-20">
-
-<h2 class="text-3xl font-bold mb-8">Skills</h2>
-
-<div class="flex flex-wrap gap-4">
-
-<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">HTML</span>
-<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">CSS</span>
-<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">JavaScript</span>
-<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">Tailwind CSS</span>
-<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">Responsive Design</span>
-<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">WordPress</span>
-<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">Elementor</span>
-<span class="bg-slate-900 border border-white/10 px-4 py-2 rounded-lg">GitHub</span>
-
-</div>
-
-</section>
-
-
-
-<!-- CONTACT -->
-
-<section id="contact" class="max-w-6xl mx-auto px-6 py-20">
-
-<h2 class="text-3xl font-bold mb-6">Contact</h2>
-
-<p class="text-gray-300 mb-6">
-If you need a modern website or landing page feel free to contact me.
-</p>
-
-<div class="space-y-3 text-lg">
-
-<a href="mailto:jorgegauna.dev@gmail.com" class="block hover:text-blue-400">
-jorgegauna.dev@gmail.com
-</a>
-
-<a href="https://github.com/jorgegauna-dev"
-target="_blank"
-class="block hover:text-blue-400">
-github.com/jorgegauna-dev
-</a>
-
-</div>
-
-</section>
-
-
-
-<!-- FOOTER -->
-
-<footer class="border-t border-white/10 text-center py-8 text-gray-400">
-
-<p>© <span id="year"></span> Jorge Gauna</p>
-
-</footer>
-
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-
+<body class="bg-slate-950 text-white selection:bg-cyan-400 selection:text-slate-950">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="#home" class="text-2xl font-bold tracking-tight text-white">
+        Jorge G.
+      </a>
+
+      <nav class="hidden items-center gap-8 md:flex">
+        <a href="#about" class="text-sm text-slate-300 transition hover:text-white">About</a>
+        <a href="#projects" class="text-sm text-slate-300 transition hover:text-white">Projects</a>
+        <a href="#skills" class="text-sm text-slate-300 transition hover:text-white">Skills</a>
+        <a href="#contact" class="text-sm text-slate-300 transition hover:text-white">Contact</a>
+      </nav>
+
+      <div class="hidden items-center gap-3 md:flex">
+        <a
+          href="https://github.com/jorgegauna-dev"
+          target="_blank"
+          class="rounded-xl border border-white/15 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/5"
+        >
+          GitHub
+        </a>
+        <a
+          href="#projects"
+          class="rounded-xl bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:scale-105"
+        >
+          View Work
+        </a>
+      </div>
+
+      <button
+        id="menu-btn"
+        class="rounded-xl border border-white/15 px-3 py-2 text-sm md:hidden"
+      >
+        Menu
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-slate-950 md:hidden">
+      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-4">
+        <a href="#about" class="text-slate-300">About</a>
+        <a href="#projects" class="text-slate-300">Projects</a>
+        <a href="#skills" class="text-slate-300">Skills</a>
+        <a href="#contact" class="text-slate-300">Contact</a>
+        <a
+          href="https://github.com/jorgegauna-dev"
+          target="_blank"
+          class="rounded-xl border border-white/15 px-4 py-3 text-center text-white"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="grid-bg relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-cyan-400/10 via-transparent to-transparent"></div>
+
+      <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-2 md:py-32">
+        <div>
+          <p class="mb-4 inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-300">
+            Web Developer | React | JavaScript | Landing Pages
+          </p>
+
+          <h1 class="mb-6 text-5xl font-bold leading-tight md:text-7xl">
+            I build modern websites that look great and perform fast
+          </h1>
+
+          <p class="mb-8 max-w-xl text-lg leading-8 text-slate-300">
+            I'm Jorge G., a web developer focused on responsive websites, modern landing pages, and clean front-end experiences using HTML, CSS, JavaScript, React, and Tailwind CSS.
+          </p>
+
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#projects"
+              class="rounded-2xl bg-cyan-400 px-6 py-3 text-center font-semibold text-slate-950 transition hover:scale-105"
+            >
+              See My Projects
+            </a>
+            <a
+              href="#contact"
+              class="rounded-2xl border border-white/15 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/5"
+            >
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur">
+          <div class="mb-6 flex items-center justify-between">
+            <h2 class="text-xl font-semibold">Quick Overview</h2>
+            <span class="rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">
+              Available for work
+            </span>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl bg-slate-900 p-5">
+              <p class="mb-2 text-sm text-slate-400">Main Focus</p>
+              <h3 class="text-lg font-semibold">Responsive Websites</h3>
+            </div>
+
+            <div class="rounded-2xl bg-slate-900 p-5">
+              <p class="mb-2 text-sm text-slate-400">Stack</p>
+              <h3 class="text-lg font-semibold">React + Tailwind</h3>
+            </div>
+
+            <div class="rounded-2xl bg-slate-900 p-5">
+              <p class="mb-2 text-sm text-slate-400">Best For</p>
+              <h3 class="text-lg font-semibold">Landing Pages</h3>
+            </div>
+
+            <div class="rounded-2xl bg-slate-900 p-5">
+              <p class="mb-2 text-sm text-slate-400">Style</p>
+              <h3 class="text-lg font-semibold">Clean Modern UI</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="mx-auto max-w-6xl px-6 py-20">
+      <div class="grid gap-10 md:grid-cols-2">
+        <div>
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">
+            About Me
+          </p>
+          <h2 class="mb-5 text-4xl font-bold">Front-end focused web developer</h2>
+          <p class="mb-4 leading-8 text-slate-300">
+            I create modern, responsive websites and landing pages with a strong focus on clean design, smooth user experience, and mobile-friendly layouts.
+          </p>
+          <p class="leading-8 text-slate-400">
+            My projects include restaurant websites, SaaS landing pages, eCommerce interfaces, and business websites built for modern presentation and portfolio quality.
+          </p>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h3 class="mb-2 text-xl font-semibold">Responsive Design</h3>
+            <p class="text-slate-400">Layouts that adapt well across desktop, tablet, and mobile.</p>
+          </div>
+
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h3 class="mb-2 text-xl font-semibold">Landing Pages</h3>
+            <p class="text-slate-400">Conversion-focused sections, CTAs, and clear structure.</p>
+          </div>
+
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h3 class="mb-2 text-xl font-semibold">Modern UI</h3>
+            <p class="text-slate-400">Simple, clean, and professional interfaces.</p>
+          </div>
+
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h3 class="mb-2 text-xl font-semibold">Front-End Projects</h3>
+            <p class="text-slate-400">Built with HTML, CSS, JavaScript, React, and Tailwind CSS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="border-y border-white/10 bg-slate-900/40 py-20">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">
+              Portfolio
+            </p>
+            <h2 class="text-4xl font-bold">Featured Projects</h2>
+          </div>
+          <p class="max-w-xl text-slate-400">
+            A growing collection of responsive websites, business pages, and modern landing page demos.
+          </p>
+        </div>
+
+        <div id="projects-grid" class="grid gap-6 md:grid-cols-2 xl:grid-cols-2"></div>
+      </div>
+    </section>
+
+    <section id="skills" class="mx-auto max-w-6xl px-6 py-20">
+      <div class="mb-12">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">
+          Skills
+        </p>
+        <h2 class="text-4xl font-bold">Tech I work with</h2>
+      </div>
+
+      <div class="flex flex-wrap gap-4">
+        <span class="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-slate-200">HTML</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-slate-200">CSS</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-slate-200">JavaScript</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-slate-200">React</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-slate-200">Tailwind CSS</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-slate-200">Responsive Design</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-slate-200">Landing Pages</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-slate-200">WordPress</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-slate-200">Shopify</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-slate-200">Front-End Development</span>
+      </div>
+    </section>
+
+    <section id="contact" class="border-t border-white/10 bg-slate-900/60 py-20">
+      <div class="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-2">
+        <div>
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">
+            Contact
+          </p>
+          <h2 class="mb-4 text-4xl font-bold">Let’s build something great</h2>
+          <p class="max-w-xl leading-8 text-slate-400">
+            I’m available for landing pages, business websites, front-end development, and modern responsive interfaces.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="space-y-4">
+            <a
+              href="https://github.com/jorgegauna-dev"
+              target="_blank"
+              class="block rounded-2xl border border-white/10 bg-slate-900 px-5 py-4 text-slate-200 transition hover:border-cyan-400/30"
+            >
+              GitHub: github.com/jorgegauna-dev
+            </a>
+
+            <a
+              href="https://www.upwork.com/freelancers/~01cdd2971f0f95927b"
+              target="_blank"
+              class="block rounded-2xl border border-white/10 bg-slate-900 px-5 py-4 text-slate-200 transition hover:border-cyan-400/30"
+            >
+              Upwork Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 px-6 py-8 text-center text-sm text-slate-500">
+    © 2026 Jorge G. Web Developer Portfolio
+  </footer>
+
+  <script>
+    const projects = [
+      {
+        title: "AI Productivity SaaS Landing Page",
+        description: "Modern SaaS landing page with dashboard preview, pricing section, FAQ, and a clean conversion-focused layout.",
+        stack: "React • Tailwind CSS",
+        live: "https://ai-productivity-saas-landing-page.netlify.app/",
+        gradient: "from-indigo-500/30 via-blue-500/20 to-cyan-400/10",
+        label: "SaaS"
+      },
+      {
+        title: "React Mini eCommerce",
+        description: "Responsive eCommerce interface with product cards, shopping cart flow, and a modern user experience.",
+        stack: "React • JavaScript • CSS",
+        live: "https://react-mini-ecommerce-jorge.netlify.app/",
+        gradient: "from-emerald-500/30 via-teal-500/20 to-cyan-400/10",
+        label: "eCommerce"
+      },
+      {
+        title: "Velora Restaurant Landing Page",
+        description: "Modern restaurant landing page with elegant sections, responsive layout, and strong visual presentation.",
+        stack: "HTML • Tailwind CSS",
+        live: "https://velora-restaurant-landing-page.netlify.app/",
+        gradient: "from-rose-500/30 via-orange-400/20 to-yellow-300/10",
+        label: "Restaurant"
+      },
+      {
+        title: "Prime Cut Barbershop Website",
+        description: "Business-style website for a barbershop with clean design, service sections, and responsive structure.",
+        stack: "HTML • Tailwind CSS",
+        live: "https://prime-cut-barbershop.netlify.app/",
+        gradient: "from-fuchsia-500/30 via-purple-500/20 to-indigo-400/10",
+        label: "Business"
+      }
+    ];
+
+    const projectsGrid = document.getElementById("projects-grid");
+
+    projects.forEach((project) => {
+      const card = document.createElement("article");
+      card.className =
+        "group overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-cyan-400/30";
+
+      card.innerHTML = `
+        <div class="h-56 border-b border-white/10 bg-gradient-to-br ${project.gradient} p-6">
+          <div class="flex h-full flex-col justify-between">
+            <span class="inline-flex w-fit rounded-full border border-white/15 bg-slate-950/40 px-3 py-1 text-xs font-medium text-slate-200">
+              ${project.label}
+            </span>
+
+            <div>
+              <p class="mb-2 text-sm text-slate-300">Live Demo Project</p>
+              <h3 class="text-2xl font-bold text-white">${project.title}</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6">
+          <p class="mb-4 leading-7 text-slate-400">
+            ${project.description}
+          </p>
+
+          <p class="mb-6 text-sm font-medium text-cyan-300">${project.stack}</p>
+
+          <a
+            href="${project.live}"
+            target="_blank"
+            class="inline-block rounded-xl bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:scale-105"
+          >
+            Live Demo
+          </a>
+        </div>
+      `;
+
+      projectsGrid.appendChild(card);
+    });
+
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
 </body>
 </html>
