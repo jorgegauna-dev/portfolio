@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
   <!-- =========================
-    PARTE 1 - META Y TAILWIND
+    PART 1 - META / SEO / THEME
   ========================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jorge Gauna | Full Stack Web Developer</title>
   <meta
     name="description"
-    content="Full Stack Web Developer portfolio focused on Next.js, React, TypeScript, Supabase, modern websites, dashboards, e-commerce, and API-based applications."
+    content="Premium portfolio of Jorge Gauna, Full Stack Web Developer specialized in Next.js, React, TypeScript, Supabase, dashboards, booking systems, e-commerce, API-based applications, and modern websites."
   />
+  <meta name="theme-color" content="#020617" />
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -19,15 +20,20 @@
       theme: {
         extend: {
           colors: {
-            primary: "#38bdf8",
-            dark: "#0f172a",
-            darker: "#020617",
-            card: "#111827",
-            border: "#1f2937",
-            textSoft: "#94a3b8"
+            brand: "#38bdf8",
+            brandDark: "#0ea5e9",
+            bgDark: "#020617",
+            card: "#0f172a",
+            cardSoft: "#111827",
+            borderSoft: "rgba(148, 163, 184, 0.18)"
           },
           boxShadow: {
-            glow: "0 0 40px rgba(56, 189, 248, 0.18)"
+            glow: "0 0 60px rgba(56, 189, 248, 0.18)",
+            card: "0 20px 60px rgba(2, 6, 23, 0.55)"
+          },
+          backgroundImage: {
+            heroGlow:
+              "radial-gradient(circle at top left, rgba(56,189,248,0.16), transparent 32%), radial-gradient(circle at top right, rgba(14,165,233,0.12), transparent 28%), linear-gradient(to bottom, #020617, #081120 40%, #020617)"
           }
         }
       }
@@ -41,366 +47,438 @@
 
     body {
       background:
-        radial-gradient(circle at top, rgba(56, 189, 248, 0.10), transparent 30%),
-        linear-gradient(to bottom, #020617, #0f172a 40%, #020617);
+        radial-gradient(circle at 10% 10%, rgba(56, 189, 248, 0.12), transparent 22%),
+        radial-gradient(circle at 90% 5%, rgba(14, 165, 233, 0.10), transparent 18%),
+        linear-gradient(to bottom, #020617, #081120 40%, #020617 100%);
+    }
+
+    .glass {
+      background: rgba(15, 23, 42, 0.72);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(148, 163, 184, 0.14);
     }
 
     .section-title {
-      @apply text-3xl md:text-4xl font-bold text-white;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -0.03em;
     }
 
-    .section-subtitle {
-      @apply text-slate-400 mt-3 max-w-2xl;
+    .section-text {
+      color: rgb(148 163 184);
+      max-width: 48rem;
+      margin-top: 1rem;
+      line-height: 1.75;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #ffffff 0%, #7dd3fc 45%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
   </style>
 </head>
-<body class="text-white font-sans">
+<body class="text-white font-sans antialiased">
 
   <!-- =========================
-    PARTE 2 - NAVBAR
+    PART 2 - NAVBAR
   ========================== -->
-  <header class="sticky top-0 z-50 border-b border-slate-800/70 bg-slate-950/80 backdrop-blur-lg">
+  <header class="sticky top-0 z-50 border-b border-white/5 bg-slate-950/70 backdrop-blur-xl">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" class="text-xl font-bold tracking-wide">
-        Jorge<span class="text-primary">Dev</span>
+      <a href="#home" class="text-xl md:text-2xl font-black tracking-tight">
+        Jorge<span class="text-brand">Gauna</span>
       </a>
 
-      <div class="hidden md:flex items-center gap-6 text-sm text-slate-300">
-        <a href="#about" class="hover:text-primary transition">About</a>
-        <a href="#skills" class="hover:text-primary transition">Skills</a>
-        <a href="#projects" class="hover:text-primary transition">Projects</a>
-        <a href="#services" class="hover:text-primary transition">Services</a>
-        <a href="#contact" class="hover:text-primary transition">Contact</a>
+      <div class="hidden lg:flex items-center gap-7 text-sm text-slate-300">
+        <a href="#about" class="hover:text-brand transition">About</a>
+        <a href="#skills" class="hover:text-brand transition">Skills</a>
+        <a href="#projects" class="hover:text-brand transition">Projects</a>
+        <a href="#services" class="hover:text-brand transition">Services</a>
+        <a href="#contact" class="hover:text-brand transition">Contact</a>
       </div>
 
       <a
         href="#contact"
-        class="inline-flex items-center rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-slate-950 hover:opacity-90 transition"
+        class="inline-flex items-center rounded-2xl bg-brand px-5 py-2.5 text-sm font-bold text-slate-950 hover:bg-sky-300 transition"
       >
-        Let’s Work
+        Hire Me
       </a>
     </nav>
   </header>
 
   <!-- =========================
-    PARTE 3 - HERO
+    PART 3 - HERO
   ========================== -->
-  <section class="max-w-7xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-24">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
+  <section id="home" class="max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-28">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
       <div>
-        <p class="inline-flex items-center rounded-full border border-sky-500/30 bg-sky-500/10 px-4 py-2 text-sm text-sky-300 mb-6">
-          Full Stack Web Developer
-        </p>
+        <span class="inline-flex items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-sm font-medium text-sky-300">
+          <span class="h-2 w-2 rounded-full bg-sky-400"></span>
+          Available for web projects
+        </span>
 
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-          I build modern websites and
-          <span class="text-primary">full stack web apps</span>
+        <h1 class="mt-7 text-4xl md:text-6xl xl:text-7xl font-black leading-[1.02] tracking-tight">
+          Premium websites and
+          <span class="gradient-text">full stack web applications</span>
+          built for modern businesses
         </h1>
 
-        <p class="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed">
-          I'm Jorge Gauna, a developer focused on building responsive websites,
-          dashboards, booking systems, e-commerce projects, and API-based applications
-          using <span class="text-white font-medium">Next.js, React, TypeScript, and Supabase</span>.
+        <p class="mt-7 max-w-2xl text-lg md:text-xl text-slate-300 leading-relaxed">
+          I’m <span class="font-semibold text-white">Jorge Gauna</span>, a
+          <span class="font-semibold text-white">Full Stack Web Developer</span>
+          focused on building modern websites, dashboards, booking systems,
+          e-commerce projects, task platforms, and API-based applications using
+          <span class="text-white font-semibold">Next.js, React, TypeScript, and Supabase</span>.
         </p>
 
-        <div class="mt-8 flex flex-wrap gap-4">
+        <div class="mt-9 flex flex-wrap gap-4">
           <a
             href="#projects"
-            class="rounded-xl bg-primary px-6 py-3 font-semibold text-slate-950 hover:opacity-90 transition"
+            class="rounded-2xl bg-brand px-6 py-3.5 font-bold text-slate-950 hover:bg-sky-300 transition"
           >
-            View Projects
+            View My Work
           </a>
 
           <a
             href="https://github.com/jorgegauna-dev"
             target="_blank"
-            class="rounded-xl border border-slate-700 px-6 py-3 font-semibold text-white hover:border-primary hover:text-primary transition"
+            class="rounded-2xl border border-white/10 bg-white/5 px-6 py-3.5 font-bold text-white hover:border-brand hover:text-brand transition"
           >
             GitHub
           </a>
+
+          <a
+            href="https://jorgegauna-portfolio.netlify.app/"
+            target="_blank"
+            class="rounded-2xl border border-white/10 bg-white/5 px-6 py-3.5 font-bold text-white hover:border-brand hover:text-brand transition"
+          >
+            Live Portfolio
+          </a>
         </div>
 
-        <div class="mt-8 flex flex-wrap gap-3 text-sm text-slate-300">
-          <span class="rounded-full border border-slate-700 px-4 py-2">Next.js</span>
-          <span class="rounded-full border border-slate-700 px-4 py-2">React</span>
-          <span class="rounded-full border border-slate-700 px-4 py-2">TypeScript</span>
-          <span class="rounded-full border border-slate-700 px-4 py-2">Supabase</span>
-          <span class="rounded-full border border-slate-700 px-4 py-2">Tailwind CSS</span>
+        <div class="mt-9 flex flex-wrap gap-3 text-sm">
+          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-200">Next.js</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-200">React</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-200">TypeScript</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-200">Supabase</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-200">API Integration</span>
         </div>
       </div>
 
       <div class="relative">
-        <div class="absolute inset-0 bg-sky-500/10 blur-3xl rounded-full"></div>
+        <div class="absolute inset-0 bg-sky-400/10 blur-3xl rounded-full"></div>
 
-        <div class="relative rounded-3xl border border-slate-800 bg-slate-900/70 p-8 shadow-glow">
+        <div class="relative glass rounded-[2rem] p-6 md:p-8 shadow-glow">
           <div class="grid grid-cols-2 gap-4">
-            <div class="rounded-2xl border border-slate-800 bg-slate-950 p-5">
-              <p class="text-textSoft text-sm">Focus</p>
-              <h3 class="mt-2 font-semibold text-lg">Full Stack Apps</h3>
+            <div class="rounded-3xl bg-slate-950/70 border border-white/5 p-5">
+              <p class="text-slate-400 text-sm">Main Focus</p>
+              <h3 class="mt-2 text-lg font-bold">Full Stack Web Apps</h3>
             </div>
 
-            <div class="rounded-2xl border border-slate-800 bg-slate-950 p-5">
-              <p class="text-textSoft text-sm">Frontend</p>
-              <h3 class="mt-2 font-semibold text-lg">Responsive UI</h3>
+            <div class="rounded-3xl bg-slate-950/70 border border-white/5 p-5">
+              <p class="text-slate-400 text-sm">Builder Tools</p>
+              <h3 class="mt-2 text-lg font-bold">Framer / Webflow</h3>
             </div>
 
-            <div class="rounded-2xl border border-slate-800 bg-slate-950 p-5">
-              <p class="text-textSoft text-sm">Builders</p>
-              <h3 class="mt-2 font-semibold text-lg">Framer / Webflow</h3>
+            <div class="rounded-3xl bg-slate-950/70 border border-white/5 p-5">
+              <p class="text-slate-400 text-sm">CMS / Store</p>
+              <h3 class="mt-2 text-lg font-bold">WordPress / Shopify</h3>
             </div>
 
-            <div class="rounded-2xl border border-slate-800 bg-slate-950 p-5">
-              <p class="text-textSoft text-sm">CMS / Store</p>
-              <h3 class="mt-2 font-semibold text-lg">WordPress / Shopify</h3>
+            <div class="rounded-3xl bg-slate-950/70 border border-white/5 p-5">
+              <p class="text-slate-400 text-sm">Backend Extras</p>
+              <h3 class="mt-2 text-lg font-bold">PHP / Python</h3>
             </div>
           </div>
 
-          <div class="mt-6 rounded-2xl border border-slate-800 bg-slate-950 p-6">
-            <p class="text-sm text-slate-400">Current title</p>
-            <h2 class="mt-2 text-2xl font-bold text-white">
+          <div class="mt-5 rounded-[1.75rem] bg-slate-950/80 border border-white/5 p-6">
+            <p class="text-slate-400 text-sm">Professional Title</p>
+            <h2 class="mt-2 text-2xl md:text-3xl font-black">
               Full Stack Web Developer
             </h2>
-            <p class="mt-3 text-slate-400 leading-relaxed">
-              I build websites and web apps that look modern, work smoothly,
-              and feel professional across all devices.
+            <p class="mt-4 text-slate-300 leading-relaxed">
+              Building clean, responsive, high-converting websites and modern web apps
+              with strong UI, smooth UX, and practical full stack functionality.
             </p>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="glass rounded-3xl p-5 text-center">
+        <p class="text-3xl font-black text-white">10+</p>
+        <p class="mt-2 text-sm text-slate-400">Portfolio Projects</p>
+      </div>
+      <div class="glass rounded-3xl p-5 text-center">
+        <p class="text-3xl font-black text-white">Full</p>
+        <p class="mt-2 text-sm text-slate-400">Responsive Builds</p>
+      </div>
+      <div class="glass rounded-3xl p-5 text-center">
+        <p class="text-3xl font-black text-white">API</p>
+        <p class="mt-2 text-sm text-slate-400">Based Applications</p>
+      </div>
+      <div class="glass rounded-3xl p-5 text-center">
+        <p class="text-3xl font-black text-white">CMS</p>
+        <p class="mt-2 text-sm text-slate-400">And Builder Work</p>
+      </div>
+    </div>
   </section>
 
   <!-- =========================
-    PARTE 4 - ABOUT
+    PART 4 - ABOUT
   ========================== -->
   <section id="about" class="max-w-7xl mx-auto px-6 py-20">
-    <div class="grid lg:grid-cols-2 gap-12 items-start">
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
       <div>
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">
-          I focus on building clean, modern, and user-friendly digital experiences.
+        <p class="text-brand font-semibold tracking-wide uppercase text-sm">About Me</p>
+        <h2 class="section-title mt-3">
+          A developer focused on modern,
+          practical, and professional web solutions
+        </h2>
+        <p class="section-text">
+          I build projects that are not only visually strong, but also usable, scalable,
+          and aligned with real client needs.
         </p>
       </div>
 
-      <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-8">
+      <div class="glass rounded-[2rem] p-8 shadow-card">
         <p class="text-slate-300 leading-relaxed">
           I build modern, responsive websites and full stack web applications using
-          <span class="text-white font-medium">Next.js, React, TypeScript, and Supabase</span>.
+          <span class="font-semibold text-white">Next.js, React, TypeScript, and Supabase</span>.
         </p>
 
         <p class="mt-5 text-slate-300 leading-relaxed">
-          I can help with dashboards, task management systems, booking systems,
-          e-commerce projects, custom web apps, and API-based applications.
+          I can help with <span class="text-white font-semibold">dashboards, task management systems, booking systems, e-commerce projects, custom web apps, and API-based applications</span>.
         </p>
 
         <p class="mt-5 text-slate-300 leading-relaxed">
-          I also work with <span class="text-white font-medium">Framer, Webflow, WordPress, Elementor, Shopify, Figma, and Tailwind CSS</span>,
-          and I am comfortable working on <span class="text-white font-medium">PHP and Python/FastAPI</span> projects when needed.
+          I also work with
+          <span class="text-white font-semibold">Framer, Webflow, WordPress, Elementor, Shopify, Figma, and Tailwind CSS</span>,
+          and I am comfortable working on
+          <span class="text-white font-semibold">PHP and Python/FastAPI projects</span> when needed.
         </p>
+
+        <div class="mt-8 grid sm:grid-cols-2 gap-4">
+          <div class="rounded-2xl border border-white/5 bg-slate-950/70 p-5">
+            <p class="text-sm text-slate-400">Main Path</p>
+            <p class="mt-2 font-bold">Web / Full Stack Development</p>
+          </div>
+          <div class="rounded-2xl border border-white/5 bg-slate-950/70 p-5">
+            <p class="text-sm text-slate-400">Secondary Path</p>
+            <p class="mt-2 font-bold">Builder / CMS Projects</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- =========================
-    PARTE 5 - SKILLS
+    PART 5 - SKILLS
   ========================== -->
   <section id="skills" class="max-w-7xl mx-auto px-6 py-20">
-    <h2 class="section-title">Skills & Tools</h2>
-    <p class="section-subtitle">
-      My main stack and the tools I use to build websites, dashboards, e-commerce projects, and full stack applications.
+    <p class="text-brand font-semibold tracking-wide uppercase text-sm">Skills</p>
+    <h2 class="section-title mt-3">Core stack, tools, and technologies</h2>
+    <p class="section-text">
+      These are the technologies and platforms I use to build websites, applications,
+      dashboards, landing pages, online stores, and client-focused digital experiences.
     </p>
 
-    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">Next.js</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">React</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">TypeScript</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">JavaScript</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">Full-Stack Development</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">Node.js</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">Supabase</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">API Integration</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">Tailwind CSS</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">HTML5</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">CSS3</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">Responsive Web Design</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">Authentication</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">Web Application Development</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">Figma</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">Framer</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">Webflow</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">WordPress</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">Elementor</div>
-      <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">Shopify</div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="glass rounded-3xl p-5 font-semibold">Next.js</div>
+      <div class="glass rounded-3xl p-5 font-semibold">React</div>
+      <div class="glass rounded-3xl p-5 font-semibold">TypeScript</div>
+      <div class="glass rounded-3xl p-5 font-semibold">JavaScript</div>
+      <div class="glass rounded-3xl p-5 font-semibold">Full-Stack Development</div>
+      <div class="glass rounded-3xl p-5 font-semibold">Node.js</div>
+      <div class="glass rounded-3xl p-5 font-semibold">Supabase</div>
+      <div class="glass rounded-3xl p-5 font-semibold">API Integration</div>
+      <div class="glass rounded-3xl p-5 font-semibold">Tailwind CSS</div>
+      <div class="glass rounded-3xl p-5 font-semibold">HTML5</div>
+      <div class="glass rounded-3xl p-5 font-semibold">CSS3</div>
+      <div class="glass rounded-3xl p-5 font-semibold">Responsive Web Design</div>
+      <div class="glass rounded-3xl p-5 font-semibold">Authentication</div>
+      <div class="glass rounded-3xl p-5 font-semibold">Web Application Development</div>
+      <div class="glass rounded-3xl p-5 font-semibold">Figma</div>
+      <div class="glass rounded-3xl p-5 font-semibold">Framer</div>
+      <div class="glass rounded-3xl p-5 font-semibold">Webflow</div>
+      <div class="glass rounded-3xl p-5 font-semibold">WordPress</div>
+      <div class="glass rounded-3xl p-5 font-semibold">Elementor</div>
+      <div class="glass rounded-3xl p-5 font-semibold">Shopify</div>
     </div>
   </section>
 
   <!-- =========================
-    PARTE 6 - PROJECTS
+    PART 6 - PROJECTS
   ========================== -->
   <section id="projects" class="max-w-7xl mx-auto px-6 py-20">
-    <h2 class="section-title">Featured Projects</h2>
-    <p class="section-subtitle">
-      A selection of projects focused on full stack applications, dashboards, responsive websites, and builder-based solutions.
+    <p class="text-brand font-semibold tracking-wide uppercase text-sm">Projects</p>
+    <h2 class="section-title mt-3">Featured work and portfolio direction</h2>
+    <p class="section-text">
+      These projects reflect the direction of my portfolio: full stack web apps,
+      e-commerce experiences, booking systems, API-based dashboards, and commercial website builds.
     </p>
 
     <div class="mt-12 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
 
-      <article class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6">
-        <p class="text-sm text-primary font-semibold">Full Stack</p>
-        <h3 class="mt-3 text-2xl font-bold">TaskFlow</h3>
+      <article class="glass rounded-[2rem] p-6 shadow-card">
+        <span class="text-xs font-bold uppercase tracking-wide text-brand">Full Stack App</span>
+        <h3 class="mt-4 text-2xl font-black">TaskFlow</h3>
         <p class="mt-4 text-slate-400 leading-relaxed">
-          Productivity dashboard with authentication, task management, priorities,
-          status filters, and a structured full stack setup using frontend and backend folders.
+          Productivity and task management platform with dashboard sections,
+          task CRUD, priorities, states, filters, authentication, and structured
+          frontend/backend architecture.
         </p>
-        <div class="mt-5 flex flex-wrap gap-2 text-xs text-slate-300">
-          <span class="rounded-full border border-slate-700 px-3 py-1">Next.js</span>
-          <span class="rounded-full border border-slate-700 px-3 py-1">TypeScript</span>
-          <span class="rounded-full border border-slate-700 px-3 py-1">Supabase</span>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">Next.js</span>
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">TypeScript</span>
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">Supabase</span>
         </div>
-        <div class="mt-6">
-          <a href="#" class="text-primary hover:underline">View Project</a>
-        </div>
+        <a href="#" class="mt-6 inline-block font-semibold text-brand hover:underline">View Project</a>
       </article>
 
-      <article class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6">
-        <p class="text-sm text-primary font-semibold">API Project</p>
-        <h3 class="mt-3 text-2xl font-bold">Football API + Dashboard</h3>
+      <article class="glass rounded-[2rem] p-6 shadow-card">
+        <span class="text-xs font-bold uppercase tracking-wide text-brand">API Project</span>
+        <h3 class="mt-4 text-2xl font-black">Football API + Dashboard</h3>
         <p class="mt-4 text-slate-400 leading-relaxed">
-          Project created to practice API routes with GET, POST, PUT, and DELETE,
-          connected to a football-themed dashboard interface.
+          API-focused project built to practice GET, POST, PUT, and DELETE routes
+          inside Next.js, combined with a dashboard interface around football data.
         </p>
-        <div class="mt-5 flex flex-wrap gap-2 text-xs text-slate-300">
-          <span class="rounded-full border border-slate-700 px-3 py-1">Next.js</span>
-          <span class="rounded-full border border-slate-700 px-3 py-1">API Routes</span>
-          <span class="rounded-full border border-slate-700 px-3 py-1">Tailwind</span>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">Next.js</span>
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">API Routes</span>
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">Tailwind</span>
         </div>
-        <div class="mt-6">
-          <a href="#" class="text-primary hover:underline">View Project</a>
-        </div>
+        <a href="#" class="mt-6 inline-block font-semibold text-brand hover:underline">View Project</a>
       </article>
 
-      <article class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6">
-        <p class="text-sm text-primary font-semibold">E-commerce</p>
-        <h3 class="mt-3 text-2xl font-bold">Full Stack E-commerce</h3>
+      <article class="glass rounded-[2rem] p-6 shadow-card">
+        <span class="text-xs font-bold uppercase tracking-wide text-brand">E-commerce</span>
+        <h3 class="mt-4 text-2xl font-black">Full Stack E-commerce</h3>
         <p class="mt-4 text-slate-400 leading-relaxed">
-          Responsive e-commerce project focused on product display, modern UI,
-          and a full stack structure for real portfolio practice.
+          Modern e-commerce build focused on product presentation, responsive design,
+          cleaner shopping flow, and full stack portfolio practice.
         </p>
-        <div class="mt-5 flex flex-wrap gap-2 text-xs text-slate-300">
-          <span class="rounded-full border border-slate-700 px-3 py-1">Next.js</span>
-          <span class="rounded-full border border-slate-700 px-3 py-1">Supabase</span>
-          <span class="rounded-full border border-slate-700 px-3 py-1">Tailwind</span>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">Next.js</span>
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">Supabase</span>
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">Tailwind</span>
         </div>
-        <div class="mt-6">
-          <a href="#" class="text-primary hover:underline">View Project</a>
-        </div>
+        <a href="#" class="mt-6 inline-block font-semibold text-brand hover:underline">View Project</a>
       </article>
 
-      <article class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6">
-        <p class="text-sm text-primary font-semibold">Booking System</p>
-        <h3 class="mt-3 text-2xl font-bold">Appointments / Booking App</h3>
+      <article class="glass rounded-[2rem] p-6 shadow-card">
+        <span class="text-xs font-bold uppercase tracking-wide text-brand">Booking System</span>
+        <h3 class="mt-4 text-2xl font-black">Appointments Platform</h3>
         <p class="mt-4 text-slate-400 leading-relaxed">
-          Booking system project with scheduling flow, responsive UI, and full stack logic for service-based businesses.
+          Booking and scheduling system for service-based businesses with responsive UI,
+          booking logic, and practical full stack functionality.
         </p>
-        <div class="mt-5 flex flex-wrap gap-2 text-xs text-slate-300">
-          <span class="rounded-full border border-slate-700 px-3 py-1">Next.js</span>
-          <span class="rounded-full border border-slate-700 px-3 py-1">TypeScript</span>
-          <span class="rounded-full border border-slate-700 px-3 py-1">Auth</span>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">Next.js</span>
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">TypeScript</span>
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">Authentication</span>
         </div>
-        <div class="mt-6">
-          <a href="#" class="text-primary hover:underline">View Project</a>
-        </div>
+        <a href="#" class="mt-6 inline-block font-semibold text-brand hover:underline">View Project</a>
       </article>
 
-      <article class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6">
-        <p class="text-sm text-primary font-semibold">Builder / CMS</p>
-        <h3 class="mt-3 text-2xl font-bold">WordPress / Elementor Projects</h3>
+      <article class="glass rounded-[2rem] p-6 shadow-card">
+        <span class="text-xs font-bold uppercase tracking-wide text-brand">CMS / Builder</span>
+        <h3 class="mt-4 text-2xl font-black">WordPress / Elementor Sites</h3>
         <p class="mt-4 text-slate-400 leading-relaxed">
-          Business websites and landing pages built for commercial use, focused on clean layouts, clear sections, and responsive presentation.
+          Business websites and landing pages created for commercial use with clear
+          layouts, responsive sections, and stronger visual structure.
         </p>
-        <div class="mt-5 flex flex-wrap gap-2 text-xs text-slate-300">
-          <span class="rounded-full border border-slate-700 px-3 py-1">WordPress</span>
-          <span class="rounded-full border border-slate-700 px-3 py-1">Elementor</span>
-          <span class="rounded-full border border-slate-700 px-3 py-1">Responsive</span>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">WordPress</span>
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">Elementor</span>
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">Responsive</span>
         </div>
-        <div class="mt-6">
-          <a href="#" class="text-primary hover:underline">View Project</a>
-        </div>
+        <a href="#" class="mt-6 inline-block font-semibold text-brand hover:underline">View Project</a>
       </article>
 
-      <article class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6">
-        <p class="text-sm text-primary font-semibold">Visual / No-Code</p>
-        <h3 class="mt-3 text-2xl font-bold">Framer / Webflow / Shopify</h3>
+      <article class="glass rounded-[2rem] p-6 shadow-card">
+        <span class="text-xs font-bold uppercase tracking-wide text-brand">Visual / Store</span>
+        <h3 class="mt-4 text-2xl font-black">Framer / Webflow / Shopify</h3>
         <p class="mt-4 text-slate-400 leading-relaxed">
-          Modern marketing pages and store-oriented builds created for stronger visual presentation and fast commercial delivery.
+          Modern marketing pages and store-oriented builds designed for strong
+          presentation, clean sections, and faster commercial delivery.
         </p>
-        <div class="mt-5 flex flex-wrap gap-2 text-xs text-slate-300">
-          <span class="rounded-full border border-slate-700 px-3 py-1">Framer</span>
-          <span class="rounded-full border border-slate-700 px-3 py-1">Webflow</span>
-          <span class="rounded-full border border-slate-700 px-3 py-1">Shopify</span>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">Framer</span>
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">Webflow</span>
+          <span class="rounded-full border border-white/10 px-3 py-1 text-slate-300">Shopify</span>
         </div>
-        <div class="mt-6">
-          <a href="#" class="text-primary hover:underline">View Project</a>
-        </div>
+        <a href="#" class="mt-6 inline-block font-semibold text-brand hover:underline">View Project</a>
       </article>
+
     </div>
   </section>
 
   <!-- =========================
-    PARTE 7 - SERVICES
+    PART 7 - SERVICES
   ========================== -->
   <section id="services" class="max-w-7xl mx-auto px-6 py-20">
-    <h2 class="section-title">Services</h2>
-    <p class="section-subtitle">
-      The type of work I can help with based on my current stack and portfolio direction.
+    <p class="text-brand font-semibold tracking-wide uppercase text-sm">Services</p>
+    <h2 class="section-title mt-3">How I can help</h2>
+    <p class="section-text">
+      My current portfolio and skill set are focused on web development work that is practical,
+      modern, and useful for real client projects.
     </p>
 
     <div class="mt-12 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-      <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6">
-        <h3 class="text-xl font-bold">Full Stack Web Apps</h3>
-        <p class="mt-4 text-slate-400">
-          Dashboards, task systems, booking apps, and custom applications with modern UI and structured architecture.
+      <div class="glass rounded-[2rem] p-6">
+        <h3 class="text-xl font-black">Full Stack Web Apps</h3>
+        <p class="mt-4 text-slate-400 leading-relaxed">
+          Dashboards, task systems, business tools, and custom applications with modern interfaces and practical backend logic.
         </p>
       </div>
 
-      <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6">
-        <h3 class="text-xl font-bold">Landing Pages</h3>
-        <p class="mt-4 text-slate-400">
-          Clean, responsive, and conversion-focused pages for businesses, products, and digital services.
+      <div class="glass rounded-[2rem] p-6">
+        <h3 class="text-xl font-black">Landing Pages</h3>
+        <p class="mt-4 text-slate-400 leading-relaxed">
+          Premium landing pages and responsive websites for services, products, agencies, and modern digital brands.
         </p>
       </div>
 
-      <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6">
-        <h3 class="text-xl font-bold">E-commerce Builds</h3>
-        <p class="mt-4 text-slate-400">
-          Product-focused websites and online store experiences with modern design and responsive layouts.
+      <div class="glass rounded-[2rem] p-6">
+        <h3 class="text-xl font-black">E-commerce & Booking</h3>
+        <p class="mt-4 text-slate-400 leading-relaxed">
+          E-commerce builds and booking systems for client-facing projects that need a clean UI and responsive flow.
         </p>
       </div>
 
-      <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-6">
-        <h3 class="text-xl font-bold">Builder / CMS Work</h3>
-        <p class="mt-4 text-slate-400">
-          Framer, Webflow, WordPress, Elementor, and Shopify projects for fast and professional commercial websites.
+      <div class="glass rounded-[2rem] p-6">
+        <h3 class="text-xl font-black">Builder / CMS Work</h3>
+        <p class="mt-4 text-slate-400 leading-relaxed">
+          Framer, Webflow, WordPress, Elementor, and Shopify work for professional commercial websites and stores.
         </p>
       </div>
     </div>
   </section>
 
   <!-- =========================
-    PARTE 8 - CONTACT
+    PART 8 - CTA / CONTACT
   ========================== -->
   <section id="contact" class="max-w-7xl mx-auto px-6 py-20">
-    <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-8 md:p-12 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold">Let’s build something great</h2>
-      <p class="mt-4 text-slate-400 max-w-2xl mx-auto leading-relaxed">
-        If you need a modern website, dashboard, booking system, e-commerce project,
-        or full stack application, feel free to reach out.
+    <div class="glass rounded-[2rem] p-8 md:p-14 text-center shadow-card">
+      <p class="text-brand font-semibold tracking-wide uppercase text-sm">Contact</p>
+      <h2 class="mt-3 text-3xl md:text-5xl font-black tracking-tight">
+        Let’s build a modern, professional web project
+      </h2>
+      <p class="mt-5 max-w-3xl mx-auto text-slate-400 leading-relaxed">
+        If you need a modern website, dashboard, booking system, e-commerce build,
+        or full stack web application, I’d be happy to help bring the project to life.
       </p>
 
-      <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <div class="mt-9 flex flex-wrap justify-center gap-4">
         <a
           href="mailto:your@email.com"
-          class="rounded-xl bg-primary px-6 py-3 font-semibold text-slate-950 hover:opacity-90 transition"
+          class="rounded-2xl bg-brand px-6 py-3.5 font-bold text-slate-950 hover:bg-sky-300 transition"
         >
           Email Me
         </a>
@@ -408,7 +486,7 @@
         <a
           href="https://github.com/jorgegauna-dev"
           target="_blank"
-          class="rounded-xl border border-slate-700 px-6 py-3 font-semibold text-white hover:border-primary hover:text-primary transition"
+          class="rounded-2xl border border-white/10 bg-white/5 px-6 py-3.5 font-bold text-white hover:border-brand hover:text-brand transition"
         >
           GitHub
         </a>
@@ -416,7 +494,7 @@
         <a
           href="https://jorgegauna-portfolio.netlify.app/"
           target="_blank"
-          class="rounded-xl border border-slate-700 px-6 py-3 font-semibold text-white hover:border-primary hover:text-primary transition"
+          class="rounded-2xl border border-white/10 bg-white/5 px-6 py-3.5 font-bold text-white hover:border-brand hover:text-brand transition"
         >
           Live Portfolio
         </a>
@@ -425,18 +503,19 @@
   </section>
 
   <!-- =========================
-    PARTE 9 - FOOTER
+    PART 9 - FOOTER
   ========================== -->
-  <footer class="border-t border-slate-800 mt-10">
+  <footer class="border-t border-white/5">
     <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-slate-500 text-sm">
+      <p class="text-sm text-slate-500">
         © 2026 Jorge Gauna. All rights reserved.
       </p>
 
-      <div class="flex items-center gap-5 text-sm text-slate-400">
-        <a href="#about" class="hover:text-primary transition">About</a>
-        <a href="#projects" class="hover:text-primary transition">Projects</a>
-        <a href="#contact" class="hover:text-primary transition">Contact</a>
+      <div class="flex flex-wrap justify-center gap-5 text-sm text-slate-400">
+        <a href="#about" class="hover:text-brand transition">About</a>
+        <a href="#skills" class="hover:text-brand transition">Skills</a>
+        <a href="#projects" class="hover:text-brand transition">Projects</a>
+        <a href="#contact" class="hover:text-brand transition">Contact</a>
       </div>
     </div>
   </footer>
